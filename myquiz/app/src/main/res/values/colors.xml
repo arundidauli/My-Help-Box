@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF0A2A96</color>
+    <color name="colorPrimaryDark">#010e3b</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="blue">#15A0E5</color>
+    <color name="splash">#0070C0</color>
+    <color name="statusbar">#1584E5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lighteblack">#191919</color>
+    <color name="greytext">#777777</color>
+    <color name="darkblue">#26437A</color>
+    <color name="colorblack">#FF011016</color>
+    <color name="colortexthint">#a1afb6</color>
+
+    <color name="button_back_color">#f1eded</color>
+    <color name="orangecolor">#FFFDAA03</color>
+    <color name="goldentextcolor">#ffef87</color>
+    <color name="pinkcolor">#EF4DE4</color>
+    <color name="greencolor">#1bc715</color>
+    <color name="darkgreencolor">#10b40a</color>
+    <color name="colorTransparent">#0000</color>
+    <color name="matalick">#be9c9a</color>
+    <color name="lightegreen">#59de55</color>
+    <color name="lightepinkcolor">#e486de</color>
+    <color name="colorred">#e42232</color>
+    <color name="colorchery">#8f1822</color>
+    //////old  app Color
+    <color name="color_attempted">#33CC33</color>
+    <color name="color_not_attempted">#FF4D4D</color>
+    <color name="color_review">#FFFF00</color>
+    <color name="color_not_visited">#808080</color>
+    <color name="color_marked">#FFFB00</color>
+    <color name="header_color">#15A0E5</color>
+    <color name="color_exam_not_ready">#3399ff</color>
+    <color name="color_exam_not_attempted">#FF4D4D</color>
+
+
+    <color name="question_grid_background">#5c15a0e5</color>
+    <color name="color_total_questions">#f8f1de</color>
+
+
+    <color name="color_hint_background">#ffffff</color>
+    <color name="lightwhite">#f5f3f3</color>
+    <color name="sliderbackground">#7c40e6</color>
+    <color name="lightegray">#ebeeef</color>
+
+
+    ///Home Screen Color Code
+    <color name="lighte_pink">#6309d3</color>
+    <color name="perple">#9627AD</color>
+    <color name="lighte_green">#96ba81 </color>
+    <color name="lighte_blue">#5677bc</color>
+    <color name="lighte_oragnge">#f3672c</color>
+    <color name="lighte_darkperple">#2A0750</color>
+    <color name="lighte_pink2">#cc6699</color>
+    <color name="lighte_bluegreen">#02a6c1</color>
+    <color name="lighte_skncolor">#cc7f32</color>
+    <color name="redcolor">#cc0000</color>
+    <color name="dark_creake">#a78d84</color>
+    <color name="darkorange">#7b3f00</color>
+
+    //home Back ground
+    <color name="homebackground">#f2f2f2</color>
+    <color name="lightgray">#dde8ff</color>
+    <color name="lighteBlueNew">#c4d4ff</color>
+    <color name="yellocolor">#fafa63</color>
+    <color name="darkyellocolor">#ffd600</color>
+    <color name="loginbuttoncolor">#f44336</color>
+    <color name="textheadercolor">#E13042</color>
+</resources>

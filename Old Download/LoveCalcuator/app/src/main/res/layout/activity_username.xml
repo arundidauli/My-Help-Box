@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsernameActivity">
+     <pl.droidsonroids.gif.GifTextView
+         android:id="@+id/gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/count"
+         android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"
+                android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cadman"
+                android:text="@string/pick_your_love_types"
+                android:background="@drawable/thin_blue_border"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down"
+                android:padding="12sp"
+                android:layout_margin="10dp" />
+
+
+
+                <EditText
+                    android:id="@+id/phoneIDTextInputEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="10"
+                    android:padding="8sp"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="@string/enter_your_name" />
+
+
+
+                <EditText
+                    android:id="@+id/phoneIDTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="10"
+                    android:padding="8sp"
+                    android:textSize="24sp"
+                    android:textColor="@color/red"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/name2" />
+
+
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:text="@string/apply"
+                android:textStyle="bold"
+                android:background="@drawable/button_signup"
+                android:textColor="@android:color/white"
+                android:layout_height="40dp" />
+
+
+
+
+
+           <!-- <LinearLayout
+                android:id="@+id/l_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cadman"
+                    android:text="Enter Your Received OTP"
+                    android:padding="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:layout_marginTop="50dp" />
+
+
+
+
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/otpTextInputEditText"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="OTP"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="6"
+                    android:inputType="number" />
+
+
+
+
+
+                <Button
+                    android:id="@+id/btn_verify_otp"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="Verify OTP"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_signup"
+                    android:textColor="@android:color/white"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cadman"
+                    android:text="Resend OTP"
+                    android:padding="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

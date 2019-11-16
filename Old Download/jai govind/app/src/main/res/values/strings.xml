@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">JG Public School</string>
+    <string name="logo">logo</string>
+    <string name="com">.com</string>
+    <string name="title_activity_orakart">Jai Govind</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">info@rpkschool.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+
+
+</resources>

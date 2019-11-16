@@ -1,0 +1,4 @@
+#Tue Nov 05 13:59:46 IST 2019
+base.0=/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

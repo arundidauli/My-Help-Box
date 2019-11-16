@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">YoutubeDL</string>
+    <string name="button_convert">Convert!</string>
+    <string name="text_url">Youtube URL</string>
+    <string-array name="file_type">
+        <item>Audio</item>
+        <item>360p</item>
+        <item>480p</item>
+        <item>720p</item>
+        <item>1080p</item>
+    </string-array>
+    <string name="text_filename">Filename:</string>
+    <string name="text_name">Name</string>
+    <string name="text_output">Output type:</string>
+    <string name="audio_toggle">Download mp3</string>
+</resources>

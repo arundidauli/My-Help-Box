@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bsckground">
+    <RelativeLayout
+            android:id="@+id/relativeheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin5"
+            android:layout_alignParentTop="true"
+    >
+        <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_white_24dp"
+                android:layout_alignParentLeft="true"/>
+        <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/play_regular"
+                android:text="@string/myaccount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp20"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_toRightOf="@+id/img_back"
+        />
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile_edit"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="@dimen/margin10"
+                android:layout_marginTop="@dimen/margin3"
+                android:src="@drawable/girl"
+                app:civ_border_color="@color/colorTransparent"
+                app:civ_border_width="2dp"
+                android:layout_gravity="end"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+        />
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeheader"
+            android:paddingBottom="@dimen/margin3"
+              >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin10"
+                android:paddingRight="@dimen/margin10">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/transparent">
+                <RelativeLayout android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:paddingBottom="@dimen/margin3"
+                >
+                    <TextView
+                            android:id="@+id/tv_Username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:text="@string/hint_Username"
+                            android:textColor="@color/white"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:fontFamily="@font/play_regular"/>
+                    <TextView
+                            android:id="@+id/tv_planName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:text="@string/hint_pinamount"
+                            android:textColor="@color/white"
+                            android:layout_below="@+id/tv_Username"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:fontFamily="@font/play_regular"/>
+                    <TextView
+                            android:id="@+id/tv_noofQuize"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:text="@string/hint_totalquiz"
+                            android:textColor="@color/white"
+                            android:layout_below="@+id/tv_planName"
+                            android:layout_marginTop="@dimen/margin10"
+                            android:fontFamily="@font/play_regular"
+                    />
+                </RelativeLayout>
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_height="match_parent"
+                              android:layout_weight="0.4"
+
+                              android:orientation="vertical"
+                              android:padding="@dimen/margin5">
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/tv_quizeComplete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/margin5"
+                                android:text="@string/hint_quizecomplete"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:fontFamily="@font/play_regular"
+
+                                android:layout_toLeftOf="@+id/tv_quizeCompletevalue"
+                                android:textSize="@dimen/sp11"
+
+                        />
+                        <TextView
+                                android:id="@+id/tv_quizeCompletevalue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:gravity="end"
+                                android:layout_marginRight="@dimen/margin5"
+                                android:fontFamily="@font/play_regular"
+                                android:textSize="@dimen/sp11"
+                        />
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/tv_quizewon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/margin5"
+                                android:text="@string/hint_quizewon"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:fontFamily="@font/play_regular"
+                                android:layout_toLeftOf="@+id/tv_quizeWonvalue"
+                                android:textSize="@dimen/sp11"
+                        />
+                        <TextView
+                                android:id="@+id/tv_quizeWonvalue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:text=""
+                                android:textColor="@color/white"
+
+                                android:gravity="end"
+                                android:layout_marginRight="@dimen/margin5"
+                                android:fontFamily="@font/play_regular"
+                                android:textSize="@dimen/sp11"
+                        />
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/tv_quizelost"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/margin5"
+                                android:text="@string/hint_quizelost"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:fontFamily="@font/play_regular"
+                                android:layout_toLeftOf="@+id/tv_quizelostvalue"
+                                android:textSize="@dimen/sp10"
+                        />
+                        <TextView
+                                android:id="@+id/tv_quizelostvalue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:gravity="end"
+                                android:layout_marginRight="@dimen/margin5"
+                                android:fontFamily="@font/play_regular"
+                                android:textSize="@dimen/sp11"
+                        />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/tv_quizeleft"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/margin5"
+                                android:text="Quiz Lapse"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:fontFamily="@font/play_regular"
+                                android:layout_toLeftOf="@+id/tv_quizlefte"
+                                android:textSize="@dimen/sp11"
+                                />
+                        <TextView
+                                android:id="@+id/tv_quizlefte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:layout_marginTop="3dp"
+                                android:gravity="end"
+                                android:layout_marginRight="@dimen/margin5"
+                                android:fontFamily="@font/play_regular"
+                                android:textSize="@dimen/sp11"
+                                android:layout_alignParentTop="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                        <TextView
+                                android:id="@+id/tv_quizeremain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/margin5"
+                                android:text="@string/hint_quizeremain"
+                                android:textColor="@color/white"
+                                android:layout_marginTop="@dimen/margin3"
+                                android:fontFamily="@font/play_regular"
+                                android:layout_toLeftOf="@+id/tv_quizeremaiinvalue"
+                                android:textSize="@dimen/sp11"
+                        />
+                        <TextView
+                                android:id="@+id/tv_quizeremaiinvalue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="@dimen/margin10"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:layout_marginTop="3dp"
+                                android:gravity="end"
+                                android:layout_marginRight="@dimen/margin5"
+                                android:fontFamily="@font/play_regular"
+                                android:textSize="@dimen/sp11"
+                                android:layout_alignParentTop="true"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--User Image View-->
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+
+                          android:background="@drawable/whitebackground_noradious"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="@dimen/margin10"
+
+            >
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_weight="0.7"
+                              android:layout_height="wrap_content"
+                              android:orientation="horizontal"
+                              android:paddingTop="@dimen/margin10"
+                              android:paddingBottom="@dimen/margin10"
+                              android:paddingLeft="@dimen/margin10"
+
+                >
+                    <TextView android:layout_width="0dp"
+                              android:layout_weight="0.7"
+                              android:layout_height="wrap_content"
+                              android:text="@string/hint_yourwallet"
+                              android:textColor="@color/colorPrimary"
+                              android:fontFamily="@font/play_regular"
+                              android:textSize="@dimen/sp14"
+                    />
+                    <TextView
+                            android:id="@+id/tv_myWallet"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.3"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/color_exam_not_attempted"
+                            android:fontFamily="@font/play_regular"
+                            android:textSize="@dimen/sp14"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/liner_withdraw"
+                        android:layout_width="0dp"
+                              android:layout_weight="0.35"
+                              android:layout_height="match_parent"
+                              android:orientation="horizontal"
+                              android:background="@drawable/redselectorwithoutradious"
+
+                >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                              android:gravity="center"
+                              android:textColor="@color/white"
+                              android:text="@string/hint_withdraw"
+                              android:drawableRight="@drawable/ic_arrow_forward_white_24dp"
+                              android:layout_gravity="center"
+                              android:textSize="@dimen/sp14"
+
+                    />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                    android:id="@+id/tv_showstatementlist"
+                    android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="@dimen/margin5"
+                      android:text="@string/hint_statement"
+                      android:textColor="@color/white"
+                      android:background="@color/darkblue"
+                      android:drawableRight="@drawable/ic_arrow_downward_black_24dp"
+            android:layout_marginTop="@dimen/margin5"/>
+
+            <LinearLayout
+                    android:id="@+id/ln_statement_header"
+                    android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+
+                          android:background="@color/colorPrimary"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="@dimen/margin5"
+            >
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hint_date"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hint_quizname"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin10"
+
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hintwithdraw"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hint_withdrawbalance"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recylerViewStatement"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/colorTransparent"
+                    android:layout_marginBottom="@dimen/margin5"
+            />
+
+            <TextView
+                    android:id="@+id/tv_show_withdrawlist"
+                    android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:padding="@dimen/margin5"
+                      android:text="@string/hint_withdrawlist"
+                      android:textColor="@color/white"
+                      android:background="@color/darkblue"
+                      android:drawableRight="@drawable/ic_arrow_downward_black_24dp"
+            android:layout_marginTop="@dimen/margin5"/>
+
+
+            <LinearLayout
+                    android:id="@+id/ln_withdrawheader"
+                    android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+
+                          android:background="@color/colorPrimary"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="@dimen/margin10"
+
+            >
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hint_date"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hint_status"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+                <TextView android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="match_parent"
+                          android:padding="@dimen/margin5"
+                          android:text="@string/hintwithdraw"
+                          android:textColor="@color/white"
+                          android:textSize="@dimen/sp10"
+                          android:fontFamily="@font/play_regular"
+                          android:gravity="center"
+                />
+
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recylerViewwithdrawlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/margin5"
+                    android:background="@color/colorTransparent"
+                    android:layout_marginBottom="@dimen/margin5"
+            />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
+

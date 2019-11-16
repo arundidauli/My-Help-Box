@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <HorizontalScrollView
+        android:id="@+id/hor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@color/cardview_dark_background"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_white"
+                android:text="@string/app_name"
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4sp"
+                android:layout_marginStart="4sp" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_white"
+                android:text="@string/app_name"
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4sp"
+                android:layout_marginStart="4sp" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_white"
+                android:text="@string/app_name"
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4sp"
+                android:layout_marginStart="4sp" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_white"
+                android:text="@string/app_name"
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4sp"
+                android:layout_marginStart="4sp" />
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_white"
+                android:text="@string/app_name"
+                android:paddingLeft="8sp"
+                android:paddingRight="8sp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_marginLeft="4sp"
+                android:layout_marginStart="4sp" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <com.brucetoo.listvideoplay.demo.DisableListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_below="@+id/hor"
+        tools:listitem="@layout/item_list_view" />
+
+    <!--Add layout_float_video at top of ListView-->
+    <include layout="@layout/layout_float_video" />
+
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activity.ConversationsActivity">
+
+    <item
+        android:id="@+id/action_images"
+        android:orderInCategory="99"
+        android:title="@string/images__received_images"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_disconnect"
+        android:orderInCategory="100"
+        android:title="@string/general__disconnect"
+        app:showAsAction="never" />
+</menu>

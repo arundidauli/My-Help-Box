@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/IV_top"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/help"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/LL_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IV_top"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TV_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send us a report on what went worng."
+            android:textSize="@dimen/label"
+            android:textColor="@color/bluehead"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/TV_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your report might help us fix it. Thank You"
+            android:textColor="@color/black"
+            android:textSize="@dimen/label"/>
+
+
+        <EditText
+            android:id="@+id/ET_subject"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray"
+            android:gravity="top|left"
+            android:hint="Give a brief description about the issue."/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

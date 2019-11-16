@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Love Calcuator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="border">Border</string>
+    <string name="shape">Shape</string>
+    <string name="circle">Circle</string>
+    <string name="square">Square</string>
+    <string name="color">Color</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="defaultColor">Default</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="name2">Enter Your Friend\'s Name</string>
+    <string name="apply">Apply</string>
+    <string name="pick_your_love_types">Pick Your Love Types</string>
+</resources>

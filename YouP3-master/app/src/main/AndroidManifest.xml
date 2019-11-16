@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.exploitr.nsg.youp3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".YouWorker"
+        android:allowBackup="false"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup,android:supportsRtl,android:theme,android:appComponentFactory"
+        tools:targetApi="p">
+        <activity
+            android:name=".AudioConverter"
+            android:theme="@style/ConverterActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:theme="@style/AboutActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="########################################" />
+        <meta-data
+            android:name="android.webkit.WebView.MetricsOptOut"
+            android:value="true" />
+
+        <activity
+            android:name=".DownloadsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/DownloadsActivity" />
+        <activity
+            android:name=".BookMarkActivity"
+            android:theme="@style/BookmarkActivity" />
+
+        <service android:name="downloader.utils.DownloadExecutorService" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/SettingsActivity" />
+        <service android:name="converter.utils.ConverterService" />
+
+        <activity
+            android:name=".MediaPlayer"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme.MediaPlayer"
+            tools:targetApi="n" />
+        <activity
+            android:name=".IntroActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name=".SuperIntentReceiver"
+            android:label="Direct">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="youtube.com" />
+                <data android:host="youtube.com.tr" />
+                <data android:host="youtube.co.uk" />
+                <data android:host="m.youtube.com" />
+                <data android:host="www.youtube.com" />
+                <data android:host="www.youtube.com.tr" />
+                <data android:host="www.youtube.co.uk" />
+                <data android:host="youtu.be" />
+                <data android:host="au.youtube.com" />
+                <data android:host="br.youtube.com" />
+                <data android:host="ca.youtube.com" />
+                <data android:host="cz.youtube.com" />
+                <data android:host="de.youtube.com" />
+                <data android:host="dk.youtube.com" />
+                <data android:host="es.youtube.com" />
+                <data android:host="fi.youtube.com" />
+                <data android:host="fr.youtube.com" />
+                <data android:host="gr.youtube.com" />
+                <data android:host="hk.youtube.com" />
+                <data android:host="hu.youtube.com" />
+                <data android:host="il.youtube.com" />
+                <data android:host="in.youtube.com" />
+                <data android:host="it.youtube.com" />
+                <data android:host="jp.youtube.com" />
+                <data android:host="kr.youtube.com" />
+                <data android:host="mx.youtube.com" />
+                <data android:host="nl.youtube.com" />
+                <data android:host="nz.youtube.com" />
+                <data android:host="no.youtube.com" />
+                <data android:host="pl.youtube.com" />
+                <data android:host="ru.youtube.com" />
+                <data android:host="tr.youtube.com" />
+                <data android:host="tw.youtube.com" />
+                <data android:host="se.youtube.com" />
+                <data android:host="uk.youtube.com" />
+                <data android:host="za.youtube.com" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

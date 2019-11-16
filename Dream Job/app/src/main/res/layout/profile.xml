@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="brdevelopers.com.jobvibe.Profile">
+
+        <TextView
+            android:id="@+id/TV_title"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Advance Information"
+            android:gravity="center"
+            android:textSize="@dimen/jobDetailLabel"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/LL_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV_title"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="5dp">
+
+        <TextView
+            android:id="@+id/TV_personal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Personal Details"
+            android:textSize="@dimen/headlabel"
+            android:padding="7dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/TV_education"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Educational Details"
+            android:layout_weight="1"
+            android:textSize="@dimen/headlabel"
+            android:layout_toRightOf="@+id/TV_personal"
+            android:padding="7dp"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/FL_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/LL_profile"
+        android:background="@color/white">
+
+
+    </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

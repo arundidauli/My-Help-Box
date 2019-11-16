@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="10dp"
+              android:background="@drawable/borderpop_windowprime"
+>
+
+    <TextView
+            android:id="@+id/tvheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center"
+            android:text="@string/hint_confirm"
+            android:textSize="@dimen/sp17"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin10"
+            android:layout_marginBottom="@dimen/margin10"
+            android:padding="@dimen/margin5"
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_marginRight="@dimen/margin5"
+            android:fontFamily="@font/sfregular"/>
+
+
+
+
+
+    <LinearLayout
+            android:id="@+id/linerbankDetails"
+                  android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/transparent"
+                  android:layout_marginTop="@dimen/margin5"
+                  android:layout_marginLeft="@dimen/margin10"
+                  android:layout_marginRight="@dimen/margin10"
+    android:layout_below="@+id/tvheader"
+    android:padding="@dimen/margin5">
+
+
+
+                <TextView
+                        android:id="@+id/tv_accno"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/goldentextcolor"
+android:gravity="center"
+
+                        android:padding="@dimen/margin5"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold"
+                android:fontFamily="@font/play_regular"/>
+                <TextView
+                        android:id="@+id/tv_ifsc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/goldentextcolor"
+                        android:gravity="center"
+                        android:padding="@dimen/margin5"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/play_regular"
+                />
+                <TextView
+                        android:id="@+id/tv_accountname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/goldentextcolor"
+                        android:padding="@dimen/margin5"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/play_regular"
+                />
+                <TextView
+                        android:id="@+id/tv_bankname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/goldentextcolor"
+                        android:gravity="center"
+
+                        android:padding="@dimen/margin5"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/play_regular"
+                />
+
+        <TextView
+                android:id="@+id/tv_branchName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/goldentextcolor"
+                android:gravity="center"
+
+                android:padding="@dimen/margin5"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold"
+                android:fontFamily="@font/play_regular"
+        />
+
+
+
+
+
+    </LinearLayout>
+    <TextView
+            android:id="@+id/tv_bankOk"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/hintok"
+            android:background="@drawable/button_redselector"
+            android:fontFamily="@font/sfregular"
+            android:padding="@dimen/margin5"
+            android:layout_below="@+id/linerbankDetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin10"
+
+
+
+    />
+</RelativeLayout>

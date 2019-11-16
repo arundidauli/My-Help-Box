@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">youtube-dl-android</string>
+    <string name="browser_search_hint">Search Google or enter url</string>
+
+    <string name="title_video">VIDEO</string>
+    <string name="title_progress">PROGRESS</string>
+    <string name="title_settings">SETTINGS</string>
+
+    <string name="dialog_video_title">Video found:</string>
+    <string name="dialog_preview_video">Preview Video</string>
+    <string name="dialog_download_video">Download Video</string>
+    <string name="dialog_download_cancel">Cancel</string>
+
+    <string name="video_empty_message">You have not downloaded any video yet.</string>
+    <string name="video_menu_rename">Rename</string>
+    <string name="video_menu_delete">Delete</string>
+    <string name="video_menu_share">Share</string>
+    <string name="video_rename_title">Rename video</string>
+    <string name="video_rename_invalid">Invalid name. Please try again!</string>
+    <string name="video_rename_exist">Video name already exists!</string>
+    <string name="video_share_message">You don\'t have any video player app installed on your device</string>
+
+
+    <string name="progress_empty_message">You are not downloading any video.</string>
+
+    <string name="settings_general">GENERAL</string>
+    <string name="settings_videos_folder">Videos folder</string>
+    <string name="settings_folder_path">folder path</string>
+    <string name="settings_clear_browser_cookies">Clear browser cookies</string>
+    <string name="settings_message_open_folder">You don\'t have any file explorer app installed on your device</string>
+
+</resources>

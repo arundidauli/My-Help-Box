@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "237685227960",
+    "firebase_url": "https://goldours-2d33a.firebaseio.com",
+    "project_id": "goldours-2d33a",
+    "storage_bucket": "goldours-2d33a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237685227960:android:77a157801a5da087",
+        "android_client_info": {
+          "package_name": "com.kapil.tanuj.updatedgoldurs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237685227960-6e19ivkjluoqu10b6860b3bvao47u1mp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kapil.tanuj.updatedgoldurs",
+            "certificate_hash": "f01db646891fe11eb0afe96343d57aabad747442"
+          }
+        },
+        {
+          "client_id": "237685227960-jd3l1v38falvlkmq32c9ffdf2qv3vmgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYx3kSd86T5vq1IF2pFM_gKHED9p2vgyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237685227960-jd3l1v38falvlkmq32c9ffdf2qv3vmgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

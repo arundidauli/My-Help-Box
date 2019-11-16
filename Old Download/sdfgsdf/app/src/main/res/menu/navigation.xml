@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+   <!-- <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="@string/title_home" />-->
+
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_white_24dp"
+        android:title="@string/menu_home" />
+ <item
+     android:id="@+id/shooping"
+     android:icon="@drawable/ic_shopping_basket"
+     android:title="Shopping" />
+
+    <item
+        android:id="@+id/entertain"
+        android:icon="@drawable/ic_entertain"
+        android:title="Entertain" />
+
+    <item
+        android:id="@+id/jobs"
+        android:icon="@drawable/ic_job"
+        android:title="Jobs" />
+    <item
+        android:id="@+id/news"
+        android:icon="@drawable/ic_news"
+        android:title="News" />
+</menu>

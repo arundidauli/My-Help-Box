@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OvalTabLayout">
+        <attr name="tab_accentColor" format="color"/>
+        <attr name="tab_cornerRadius" format="dimension"/>
+        <attr name="tab_outlineWidth" format="dimension"/>
+        <attr name="tab_tabSelectedTextColor" format="color"/>
+    </declare-styleable>
+</resources>

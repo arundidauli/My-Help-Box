@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+    def INT = "int"
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+        versionCode 14
+        versionName "1.2.3"
+
+        vectorDrawables.useSupportLibrary = true
+
+        buildConfigField INT, "MAX_HISTORY", "10"
+        consumerProguardFiles 'proguard-android.txt'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        //    proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    lintOptions {
+      abortOnError false
+    }
+
+    useLibrary 'android.test.base'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+ext {
+    PUBLISH_GROUP_ID = 'br.com.mauker.materialsearchview'
+    PUBLISH_ARTIFACT_ID = 'materialsearchview'
+    PUBLISH_VERSION = '1.2.3'
+}
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

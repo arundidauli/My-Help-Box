@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.glodanif.bluetoothchat">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".ChatApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ConversationsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.ScanActivity"
+            android:label="@string/scan__scan"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.ChatActivity"
+            android:label="@string/chat__chat"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".ui.activity.ProfileActivity"
+            android:label="@string/initial_setup__initial_setup"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.activity.SettingsActivity"
+            android:label="@string/settings__title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.ContactChooserActivity"
+            android:label="@string/contact_chooser__title"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.ImagePreviewActivity"
+            android:label="@string/images__image"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.ReceivedImagesActivity"
+            android:label="@string/images__received_images"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:label="@string/about__about"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".data.service.BluetoothConnectionService" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="b26de0978fcc0fa56349d97da37b554f54e1d034" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name=".data.file.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+</manifest>

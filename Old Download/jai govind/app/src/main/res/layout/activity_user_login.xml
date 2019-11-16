@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.UserLogin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/circle_100dp"
+                android:layout_height="@dimen/circle_100dp"
+                android:src="@drawable/ic_login"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cadman"
+                android:text="Phone Number verification"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phoneIDTextInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/phoneIDTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="10"
+                    android:hint="Mobile No"
+                    android:inputType="text|phone" />
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:text="Login"
+                android:textStyle="bold"
+                android:background="@drawable/button_signup"
+                android:textColor="@android:color/white"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cadman"
+                android:text="New User? | Register Here"
+                android:padding="8dp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:id="@+id/l_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cadman"
+                    android:text="Enter Your Received OTP"
+                    android:padding="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/icon_size_50dp" />
+
+
+
+
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/otpTextInputEditText"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="OTP"
+                        android:textAlignment="center"
+                        android:layout_marginTop="10dp"
+                        android:maxLines="6"
+                        android:inputType="number" />
+
+
+
+
+
+                <Button
+                    android:id="@+id/btn_verify_otp"
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:text="Verify OTP"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_signup"
+                    android:textColor="@android:color/white"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cadman"
+                    android:text="Resend OTP"
+                    android:padding="8dp"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

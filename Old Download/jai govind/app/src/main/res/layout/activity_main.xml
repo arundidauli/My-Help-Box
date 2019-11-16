@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.SplashScreen">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_login"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/padding_8"
+        android:elevation="3sp"
+        android:translationZ="3sp"
+        android:layout_margin="@dimen/icon_size_50dp"
+        android:contentDescription="@string/logo"
+        tools:ignore="UnusedAttribute" />
+    <TextView
+        android:layout_below="@+id/logo"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:fontFamily="@font/cunia"
+        android:textColor="@color/colorPrimary"
+        android:text="Jai Govind Public School"/>
+
+
+
+
+</RelativeLayout>

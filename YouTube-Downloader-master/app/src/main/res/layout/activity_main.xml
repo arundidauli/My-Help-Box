@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="?attr/backgroundcolor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content" >
+    <androidx.cardview.widget.CardView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="?attr/cardbackground"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/youtubevideourlenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aliceregular"
+                android:gravity="center_horizontal"
+                android:hint="@string/paste_youtube_video_url"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="?attr/textcolor2"
+                android:textColorHint="?attr/textcolor2"
+                tools:ignore="Autofill" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/downloadbtn"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="3.0"
+                    android:background="?attr/buttoncolor"
+                    android:drawableLeft="@drawable/download"
+                    android:fontFamily="@font/aliceregular"
+                    android:onClick="ytvdownload"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/download"
+                    android:textColor="?attr/textcolor1"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:layout_width="0.0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="3.2"
+                    android:background="?attr/buttoncolor"
+                    android:drawableLeft="@drawable/folder"
+                    android:fontFamily="@font/aliceregular"
+                    android:onClick="viewdownloadsbtn"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/see_downloaded_videos"
+                    android:textColor="?attr/textcolor1"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/downloadbtnaudio"
+                    android:layout_width="0.0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="3.0"
+                    android:background="?attr/buttoncolor"
+                    android:drawableLeft="@drawable/music"
+                    android:fontFamily="@font/aliceregular"
+                    android:onClick="ytvdownloadaudio"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/download_mp3"
+                    android:textColor="?attr/textcolor1"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" />
+
+                <Button
+                    android:layout_width="0.0dip"
+                    android:layout_height="40dp"
+                    android:layout_weight="3.2"
+                    android:background="?attr/buttoncolor"
+                    android:drawableLeft="@drawable/music"
+                    android:fontFamily="@font/aliceregular"
+                    android:onClick="ytvdownloadhdp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/see_downloaded_videos"
+                    android:textColor="?attr/textcolor1"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#D1D1D1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="2dp"
+                    android:background="?attr/cardbackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <Button
+                        android:id="@+id/downloadhdbtn"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/buttoncolor"
+                        android:drawableLeft="@drawable/cloud_computing"
+                        android:fontFamily="@font/aliceregular"
+                        android:onClick="ytvdownloadhd"
+                        android:paddingLeft="20dp"
+                        android:text="Download in HD"
+                        android:textColor="?attr/textcolor1"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/aliceregular"
+                        android:text="To unlock, Upgrade to Pro"
+                        android:textColor="?attr/textcolor2"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:id="@+id/upgradebox"
+                android:layout_height="match_parent" >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="?attr/cardbackground"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="?attr/textcolor1"
+                    android:padding="5dp"
+                    android:textSize="17dp"
+                    android:text="@string/upgrade_to_pro"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:padding="5dp"
+                    android:textColor="?attr/textcolor2"
+                    android:textAlignment="center"
+                    android:text="Unlock more features for free, sign in with Google and Unlock Download in HD Option"/>
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:id="@+id/signoutbox"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="?attr/cardbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:id="@+id/username"
+                    android:textColor="?attr/textcolor1"
+                    android:layout_marginLeft="10dp"
+                    android:text="Logged in as: "/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/sign_out_button"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="9dp"
+                    android:visibility="visible"
+                    android:textColor="?attr/textcolor1"
+                    android:background="?attr/buttoncolor"
+                    android:drawableLeft="@drawable/google_icon"
+                    android:drawablePadding="10dp"
+                    android:text="@string/sign_out"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

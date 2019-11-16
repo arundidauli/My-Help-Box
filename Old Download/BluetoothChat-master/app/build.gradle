@@ -1,0 +1,146 @@
+def final VERSION_CODE = 37
+def final VERSION_NAME = '1.3.2'
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'io.fabric'
+
+android {
+
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId 'com.glodanif.bluetoothchat'
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        kapt {
+            arguments {
+                arg('room.schemaLocation', "$projectDir/schemas".toString())
+            }
+        }
+    }
+
+    getSourceSets().each {
+        it.java.srcDirs += "src/$it.name/kotlin"
+    }
+
+    signingConfigs {
+
+        release {
+
+            if (project.hasProperty('bluetoothchat.properties') &&
+                    file(project.property('bluetoothchat.properties')).exists()) {
+
+                Properties properties = new Properties()
+                properties.load(
+                        new FileInputStream(file(project.property('bluetoothchat.properties'))))
+
+                storeFile file(properties['keystore'])
+                storePassword properties['keystore.password']
+                keyAlias properties['keyAlias']
+                keyPassword properties['keyPassword']
+            } else {
+                null
+            }
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix '.dev'
+            versionNameSuffix '-DEV'
+            buildConfigField 'boolean', 'AUTORESPONDER', 'false'
+        }
+
+        autoresponder {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix '.ar'
+            versionNameSuffix '-AR'
+            buildConfigField 'boolean', 'AUTORESPONDER', 'true'
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField 'boolean', 'AUTORESPONDER', 'false'
+        }
+    }
+
+    packagingOptions {
+       exclude 'META-INF/atomicfu.kotlin_module'
+    }
+}
+
+dependencies {
+
+    def final ROOM_VERSION = '2.0.0'
+    def final LIFECYCLE_VERSION = '2.0.0'
+    def final ESPRESSO_VERSION = '3.2.0-beta01'
+    def final COROUTINES_VERSION = '1.2.1'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation "androidx.room:room-runtime:$ROOM_VERSION"
+    kapt "androidx.room:room-compiler:$ROOM_VERSION"
+
+    implementation "androidx.lifecycle:lifecycle-runtime:$LIFECYCLE_VERSION"
+    implementation "androidx.lifecycle:lifecycle-extensions:$LIFECYCLE_VERSION"
+    kapt "androidx.lifecycle:lifecycle-compiler:$LIFECYCLE_VERSION"
+
+    implementation 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.jkwiecien:EasyImage:2.1.1'
+    implementation 'io.github.kobakei:ratethisapp:1.2.0'
+    implementation 'me.priyesh:chroma:1.0.2'
+
+    implementation 'org.koin:koin-android:1.0.2'
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.10.0@aar') {
+        transitive = true
+    }
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$KOTLIN_VERSION"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINES_VERSION"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINES_VERSION"
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.0-alpha-1'
+
+    testImplementation "org.jetbrains.kotlin:kotlin-stdlib:$KOTLIN_VERSION"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$KOTLIN_VERSION"
+    testImplementation 'io.mockk:mockk:1.9.3'
+    testImplementation 'junit:junit:4.12'
+
+    androidTestImplementation 'androidx.annotation:annotation:1.0.2'
+    androidTestImplementation "androidx.test.espresso:espresso-core:$ESPRESSO_VERSION"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$ESPRESSO_VERSION"
+}
+
+task assembleReleaseAndOpen {
+    dependsOn 'assembleRelease'
+    doLast {
+        Runtime.getRuntime().exec("explorer.exe /select," +
+                "${buildDir.getAbsolutePath()}\\outputs\\apk\\release\\app-release.apk")
+    }
+}

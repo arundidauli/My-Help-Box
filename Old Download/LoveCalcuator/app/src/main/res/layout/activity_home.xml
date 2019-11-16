@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/circularbordersolid"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:weightSum="2">
+
+        <com.yangp.ypwaveview.YPWaveView
+            android:id="@+id/heart1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/circularbordersolid"
+            android:padding="8dp"
+            app:animatorEnable="true"
+            app:behideColor="#008CFF"
+            app:borderColor="#CE0041"
+            app:borderWidthSize="3sp"
+            app:frontColor="#004179"
+            app:max="1000"
+            app:progress="796"
+            app:shapePadding="2sp"
+            app:shapeType="heart"
+            app:strong="150"
+            app:textColor="#FFFFFF"
+            app:textHidden="false" />
+
+        <View
+            android:layout_width="1sp"
+            android:layout_height="150dp"
+            android:layout_margin="@dimen/padd_5" />
+        <com.yangp.ypwaveview.YPWaveView
+            android:id="@+id/heart2"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:background="@drawable/circularbordersolid"
+            android:padding="8dp"
+            app:animatorEnable="true"
+            app:behideColor="#008CFF"
+            app:borderColor="#CE0041"
+            app:borderWidthSize="3sp"
+            app:frontColor="#004179"
+            app:max="1000"
+            app:progress="796"
+            app:shapePadding="2sp"
+            app:shapeType="heart"
+            app:strong="150"
+            app:textColor="#FFFFFF"
+            app:textHidden="false" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_f"
+        android:layout_margin="@dimen/padd_5"
+        android:orientation="horizontal"
+        android:padding="@dimen/padd_5">
+
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padd_5"
+            android:textAlignment="center"
+            android:fontFamily="@font/cunia"
+            android:layout_marginEnd="@dimen/padd_5"
+            android:background="@drawable/circularbordersolid"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/padd_5"
+            android:layout_marginLeft="@dimen/padd_5"
+            android:fontFamily="@font/cunia"
+            android:background="@drawable/circularbordersolid"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_percentage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_name"
+        android:text="Total love each other"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/cunia"/>
+
+    <com.gelitenight.waveview.library.WaveView
+        android:id="@+id/wave"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:padding="@dimen/padd_5" />
+
+    <TextView
+        android:id="@+id/txt_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/cunia"/>
+</RelativeLayout>

@@ -1,0 +1,128 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.androidattendancesystem"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="15"
+8-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:7:5-64:19
+12        android:name="com.android.attendance.context.ApplicationContext"
+12-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:8:9-73
+13        android:allowBackup="true"
+13-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:9:9-35
+14        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+14-->[com.android.support:support-compat:28.0.0] /home/arun/.gradle/caches/transforms-2/files-2.1/ccf94a4f227dfa4f17156620e28a8b98/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+15        android:debuggable="true"
+16        android:icon="@mipmap/ic_launcher1"
+16-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:10:9-44
+17        android:label="@string/app_name"
+17-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:12:9-41
+18        android:roundIcon="@mipmap/ic_launcher1"
+18-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:11:9-49
+19        android:theme="@style/AppTheme" >
+19-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:13:9-40
+20        <activity
+20-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:14:9-22:20
+21            android:name="com.android.attendance.activity.SplashScreen"
+21-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:14:19-78
+22            android:theme="@style/AppTheme.Splash" >
+22-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:15:13-51
+23            <intent-filter>
+23-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:17:13-21:29
+24                <action android:name="android.intent.action.MAIN" />
+24-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:18:17-69
+24-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:18:25-66
+25
+26                <category android:name="android.intent.category.LAUNCHER" />
+26-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:20:17-77
+26-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:20:27-74
+27            </intent-filter>
+28        </activity>
+29        <activity
+29-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:23:9-27:20
+30            android:name="com.android.attendance.activity.MainActivity"
+30-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:24:13-72
+31            android:label="@string/app_name" >
+31-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:25:13-45
+32        </activity>
+33        <activity
+33-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:28:9-30:57
+34            android:name="com.android.attendance.activity.LoginActivity"
+34-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:29:13-73
+35            android:label="@string/app_name" />
+35-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:30:13-45
+36        <activity
+36-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:31:9-33:57
+37            android:name="com.android.attendance.activity.MenuActivity"
+37-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:32:13-72
+38            android:label="@string/app_name" />
+38-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:33:13-45
+39        <activity
+39-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:34:9-36:57
+40            android:name="com.android.attendance.activity.AddFacultyActivity"
+40-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:35:13-78
+41            android:label="@string/app_name" />
+41-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:36:13-45
+42        <activity
+42-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:37:9-39:57
+43            android:name="com.android.attendance.activity.AddStudentActivity"
+43-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:38:13-78
+44            android:label="@string/app_name" />
+44-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:39:13-45
+45        <activity
+45-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:40:9-42:57
+46            android:name="com.android.attendance.activity.ViewFacultyActivity"
+46-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:41:13-79
+47            android:label="@string/app_name" />
+47-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:42:13-45
+48        <activity
+48-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:43:9-45:57
+49            android:name="com.android.attendance.activity.ViewStudentActivity"
+49-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:44:13-79
+50            android:label="@string/app_name" />
+50-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:45:13-45
+51        <activity
+51-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:46:9-48:57
+52            android:name="com.android.attendance.activity.TestActivity"
+52-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:47:13-72
+53            android:label="@string/app_name" />
+53-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:48:13-45
+54        <activity
+54-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:49:9-51:57
+55            android:name="com.android.attendance.activity.ViewStudentByBranchYear"
+55-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:50:13-83
+56            android:label="@string/app_name" />
+56-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:51:13-45
+57        <activity
+57-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:52:9-54:57
+58            android:name="com.android.attendance.activity.AddAttandanceSessionActivity"
+58-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:53:13-88
+59            android:label="@string/app_name" />
+59-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:54:13-45
+60        <activity
+60-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:55:9-57:57
+61            android:name="com.android.attendance.activity.AddAttendanceActivity"
+61-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:56:13-81
+62            android:label="@string/app_name" />
+62-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:57:13-45
+63        <activity
+63-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:58:9-60:57
+64            android:name="com.android.attendance.activity.ViewAttendanceByFacultyActivity"
+64-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:59:13-91
+65            android:label="@string/app_name" />
+65-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:60:13-45
+66        <activity
+66-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:61:9-63:57
+67            android:name="com.android.attendance.activity.ViewAttendancePerStudentActivity"
+67-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:62:13-92
+68            android:label="@string/app_name" />
+68-->/home/arun/AndroidStudioProjects/Attendance-management-system-master/AndroidAttendanceSystem Project/app/src/main/AndroidManifest.xml:63:13-45
+69    </application>
+70
+71</manifest>

@@ -1,0 +1,153 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-allopen'
+
+apply plugin: 'jacoco'
+
+apply plugin: 'com.github.kt3k.coveralls'
+
+jacoco {
+    version = '0.8.1'
+}
+
+allOpen {
+    annotation 'com.youtubedl.OpenForTesting'
+}
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "com.youtubedl"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "util.TestRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    // Android support
+    implementation deps.support.appcompat
+    implementation deps.support.design
+    implementation deps.support.constraintlayout
+
+    // Testing
+    testImplementation deps.testing.junit
+    testImplementation deps.testing.mockito_core
+    testImplementation deps.testing.mockito_kotlin
+    androidTestImplementation deps.testing.mockito_android
+    androidTestImplementation deps.testing.mockito_kotlin
+    androidTestImplementation deps.testing.test_runner
+    androidTestImplementation deps.testing.espresso_core
+    androidTestImplementation deps.testing.espresso_intents
+
+    // Multidex
+    implementation deps.android.multidex
+
+    // Kotlin
+    implementation deps.kotlin.stdlib
+
+    // Life cycle
+    implementation deps.lifecycle.extensions
+    kapt deps.lifecycle.compiler
+    testImplementation deps.arch_core.testing
+    androidTestImplementation deps.arch_core.testing
+
+    // Room
+    implementation deps.room.runtime
+    implementation deps.room.rxjava2
+    kapt deps.room.compiler
+
+    // Dagger2
+    implementation deps.dagger.runtime
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.compiler
+    kapt deps.dagger.android_processor
+
+    // OkHttp and Retrofit
+    implementation deps.okhttp.runtime
+    implementation deps.okhttp.logging
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.rxjava2
+    implementation deps.retrofit.gson
+
+    // RxJava and RxAndroid
+    implementation deps.reactivex.rxjava2
+    implementation deps.reactivex.rxandroid
+
+    // Stetho for network debugging
+    implementation deps.stetho.runtime
+    implementation deps.stetho.okhttp
+
+    // Glide
+    implementation deps.glide.runtime
+    annotationProcessor deps.glide.compiler
+}
+
+tasks.coveralls {
+    dependsOn 'check'
+    onlyIf { System.getenv("COVERALLS_REPO_TOKEN") }
+}
+
+task jacocoTestReport(type: JacocoReport, dependsOn: 'testDebugUnitTest') {
+    group = 'Reporting'
+    description = 'Generate Jacoco coverage reports after running tests.'
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+
+    def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*',
+                      '**/Manifest*.*', '**/*Test*.*', 'android/**/*.*',
+
+                      '**/Lambda$*.class', '**/Lambda.class', '**/*Lambda.class',
+                      '**/*Lambda*.class', '**/*Builder.*',
+
+                      '**/*_Injector.class', '**/*_Injector*.*', '**/*_*Factory*.*',
+                      '**/*Component*.*', '**/*Module*.*',
+
+                      '**/component/widget/*.*', '**/component/binding/*.*', '**/util/ext/*.*',
+                      '**/util/scheduler/*.*', '**/util/fragment/*.*', '**/DLApplication.*',
+                      '**/ViewModelFactory.*', '**/RoomConverter.*', '**/AppDatabase.*']
+
+    def javaClasses = fileTree(dir: "$project.buildDir/intermediates/javac/debug", excludes: fileFilter)
+    def kotlinClasses = fileTree(dir: "$project.buildDir/tmp/kotlin-classes/debug", excludes: fileFilter)
+
+    sourceDirectories = files(android.sourceSets.main.java.srcDirs)
+    classDirectories = files([javaClasses, kotlinClasses])
+    executionData = fileTree(dir: project.buildDir, includes: [
+            'jacoco/testDebugUnitTest.exec', 'outputs/code-coverage/connected/*coverage.ec'
+    ])
+}

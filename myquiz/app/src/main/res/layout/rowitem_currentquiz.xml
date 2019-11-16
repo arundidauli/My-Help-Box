@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin10"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginRight="@dimen/margin10"
+        android:background="@drawable/transparent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin5">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/tv_quiz"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin5"
+                    android:text="@string/Quize"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+            <TextView
+                    android:id="@+id/textviewDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin5"
+                    android:text="@string/date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+            <TextView
+                    android:id="@+id/tv_Quizetime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin5"
+                    android:text="@string/time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+        <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/liner_trophy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:id="@+id/img_troffy"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/trophy"
+                        android:visibility="gone" />
+
+                <TextView
+                        android:id="@+id/tv_statuscomplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="@dimen/margin10"
+                        android:gravity="end"
+                        android:paddingRight="@dimen/margin10"
+                        android:textSize="@dimen/sp15"
+                        android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:id="@+id/linerWatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/liner_trophy"
+                    android:layout_gravity="top"
+                    android:gravity="top"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:id="@+id/imgwatch"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/margin20"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/watch"
+
+
+                        />
+
+                <TextView
+                        android:id="@+id/tv_timer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/sfregular"
+                        android:gravity="left"
+                        android:text="@string/timer"
+                        android:textColor="@color/goldentextcolor"
+                        android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linerWatch"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+
+
+                    >
+
+                <LinearLayout
+                        android:id="@+id/liner_startquiz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="@dimen/margin3"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_greenselector"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin2"
+                        android:paddingRight="@dimen/margin2">
+
+                    <TextView
+                            android:id="@+id/tv_exam"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin3"
+                            android:fontFamily="@font/sfregular"
+                            android:gravity="center"
+
+                            android:paddingTop="@dimen/margin9"
+                            android:paddingBottom="@dimen/margin9"
+                            android:singleLine="true"
+                            android:text="@string/StartQuiz"
+                            android:textColor="@color/goldentextcolor"
+                            android:textSize="@dimen/sp12"
+
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/liner_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="@dimen/margin3"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_redselector"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin2"
+                        android:paddingRight="@dimen/margin2">
+
+                    <TextView
+                            android:id="@+id/tv_resultheader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="center"
+                            android:padding="@dimen/margin2"
+                            android:paddingLeft="@dimen/margin5"
+                            android:paddingRight="@dimen/margin5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp12" />
+
+                    <TextView
+                            android:id="@+id/textviewAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfregular"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/margin5"
+
+
+                            android:paddingRight="@dimen/margin5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp12"
+
+                            />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

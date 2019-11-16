@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "804533909466",
+    "firebase_url": "https://chat-app-e43ea.firebaseio.com",
+    "project_id": "chat-app-e43ea",
+    "storage_bucket": "chat-app-e43ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804533909466:android:e821e68618072a11c772e3",
+        "android_client_info": {
+          "package_name": "com.techtutz.rivchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "804533909466-domr763rdlnaa3uh7arm5729edqkcemt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techtutz.rivchat",
+            "certificate_hash": "68457ba3214eebb103f2bd35ecd6e5172eb173c0"
+          }
+        },
+        {
+          "client_id": "804533909466-snion1u37jjg2t11qo9hpingse773bfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAajJmWgJ07gAq4hJKykX3hu9fSzE6u73I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "804533909466-snion1u37jjg2t11qo9hpingse773bfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

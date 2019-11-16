@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Satta King Best</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Satta King Best</string>
+    <string name="nav_header_subtitle">sattakingbest@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">About us</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Tab 1</string>
+    <string name="menu_slideshow">Tab 2</string>
+    <string name="menu_tools">Tab 3</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+</resources>

@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "41722005827",
+    "firebase_url": "https://down-master.firebaseio.com",
+    "project_id": "down-master",
+    "storage_bucket": "down-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41722005827:android:ad2a768d51b3d7be4ac7f6",
+        "android_client_info": {
+          "package_name": "com.brucetoo.listvideoplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41722005827-aj2aktat3ib27lj6h1tjj9689n8fj9su.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.brucetoo.listvideoplay",
+            "certificate_hash": "f01db646891fe11eb0afe96343d57aabad747442"
+          }
+        },
+        {
+          "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS-riBpxeXh_ejTkz8hC3CAY8mX7g44sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41722005827:android:8151b235aaf95b784ac7f6",
+        "android_client_info": {
+          "package_name": "com.mytechtutz.Zclip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41722005827-7v461o78a49i1rsqq9e7gshi2i6l2242.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mytechtutz.Zclip",
+            "certificate_hash": "f01db646891fe11eb0afe96343d57aabad747442"
+          }
+        },
+        {
+          "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS-riBpxeXh_ejTkz8hC3CAY8mX7g44sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41722005827:android:33dfdae8ff2aeccf4ac7f6",
+        "android_client_info": {
+          "package_name": "dodola.downtube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41722005827-3elpng9vta1u37b0d4lrjv771kv6ht38.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dodola.downtube",
+            "certificate_hash": "f01db646891fe11eb0afe96343d57aabad747442"
+          }
+        },
+        {
+          "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS-riBpxeXh_ejTkz8hC3CAY8mX7g44sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/IV_bell"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/LL_titleBar"
+        android:src="@drawable/notification" />
+
+    <LinearLayout
+        android:id="@+id/LL_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IV_bell"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TV_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thank You for Using JobVibe!"
+            android:textSize="@dimen/label"
+            android:textColor="@color/bluehead"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/TV_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Your application has been registered. You'll be notified with further information."
+            android:textColor="@color/black"
+            android:textSize="@dimen/label"/>
+
+        <TextView
+            android:id="@+id/TV_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="8dp"
+            android:text="Okay"
+            android:textSize="@dimen/label"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@color/ok_button"
+            android:elevation="5dp"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

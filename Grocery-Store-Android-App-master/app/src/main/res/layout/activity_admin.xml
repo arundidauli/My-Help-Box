@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <ImageView android:src="@drawable/icon" android:layout_height="wrap_content"
+        android:layout_width="fill_parent" android:id="@+id/mobiIcon"
+        />
+
+
+    <Button android:text="@string/addproduct" android:id="@+id/addproduct" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="@string/addcoupon" android:id="@+id/addcoupon" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="@string/listproducts" android:id="@+id/listproducts" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="@string/listcoupons" android:id="@+id/listcoupons" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    <Button android:text="@string/deletecoupons" android:id="@+id/deletecoupons" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+
+    <Button android:text="@string/logout" android:id="@+id/logout" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_white"
+        android:title="@string/dashboard" />
+
+    <item
+        android:id="@+id/navigation_purchase"
+        android:icon="@drawable/ic_purchase"
+        android:title="@string/purchase" />
+
+    <item
+        android:id="@+id/navigation_stock_transfer"
+        android:icon="@drawable/ic_transfer"
+        android:title="@string/stock_transfer" />
+
+    <item
+        android:id="@+id/navigation_transaction"
+        android:icon="@drawable/ic_transaction1"
+        android:title="@string/transaction" />
+</menu>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.henryblue.ijkplayerlibrary:ijkplayer-java:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/xvideoplayer/build/intermediates/exploded-aar/com.henryblue.ijkplayerlibrary/ijkplayer-java/1.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/xvideoplayer/build/intermediates/exploded-aar/com.henryblue.ijkplayerlibrary/ijkplayer-java/1.0.1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

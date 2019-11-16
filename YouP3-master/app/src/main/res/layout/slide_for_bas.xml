@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.github.dreierf.materialintroscreen.parallax.ParallaxLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingTop="72dp"
+    android:paddingBottom="72dp">
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/download_mode"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/normal_des"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/adv_des"
+        android:textColor="@android:color/black" />
+
+    <com.llollox.androidtoggleswitch.widgets.ToggleSwitch
+        android:id="@+id/basicAdv_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="15sp"
+        app:borderRadius="8dp"
+        app:borderWidth="1px"
+        app:checkedBackgroundColor="#6d6d68"
+        app:checkedBorderColor="#000000"
+        app:checkedTextColor="@android:color/white"
+        app:separatorColor="#000000"
+        app:textToggleLeft="Basic Mode"
+        app:textToggleRight="Advanced Mode"
+        app:toggleHeight="50dp"
+        app:uncheckedBackgroundColor="#EEEEEE"
+        app:uncheckedBorderColor="#FFFFFF" />
+
+</io.github.dreierf.materialintroscreen.parallax.ParallaxLinearLayout>

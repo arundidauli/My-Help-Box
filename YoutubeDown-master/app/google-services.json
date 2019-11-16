@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "41722005827",
+    "firebase_url": "https://down-master.firebaseio.com",
+    "project_id": "down-master",
+    "storage_bucket": "down-master.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41722005827:android:33dfdae8ff2aeccf4ac7f6",
+        "android_client_info": {
+          "package_name": "dodola.downtube"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41722005827-3elpng9vta1u37b0d4lrjv771kv6ht38.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dodola.downtube",
+            "certificate_hash": "f01db646891fe11eb0afe96343d57aabad747442"
+          }
+        },
+        {
+          "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCS-riBpxeXh_ejTkz8hC3CAY8mX7g44sE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41722005827-bla507c7q7upufmi5995qnsen4k87110.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
